@@ -1,0 +1,73 @@
+# Source file. tells dbt that these data sources already exists and should not make them.
+# These sources will be used in our models.
+# keyword: source vs ref
+#   source -- raw snowflake, ref -- dbt model
+
+# this is also where you could run some tests on your tables to ensure that they are setup correctly
+#   according to some ERD.
+
+# typical in production environment to refer to create 1 to 1 source tables
+#   It can track lineage, show the raw table in the DAG, run tests against it, document it, and optionally check source freshness.
+
+sources:
+  - name: raw
+    database: dbt_db
+    schema: dbt_schema
+    tables:
+      - name: customers
+        columns:
+          - name: cust_id
+            tests:
+              - unique
+              - not_null
+      - name: stores
+        columns:
+          - name: store_id
+            tests:
+              - unique
+              - not_null
+      - name: skus
+        columns:
+          - name: sku_id
+            tests:
+              - unique
+              - not_null
+      - name: promotions
+        columns:
+          - name: promo_id
+            tests:
+              - unique
+              - not_null
+      - name: inventory
+        columns:
+          - name: store_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'stores')
+                  field: store_id
+          - name: sku_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'skus')
+                  field: sku_id
+      - name: sales 
+        columns:
+          - name: store_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'stores')
+                  field: store_id
+          - name: sku_id
+            tests:
+              - not_null
+              - relationships:
+                  to: source('raw', 'skus')
+                  field: sku_id
+          - name: customer_id
+            tests:
+              - relationships:
+                  to: source('raw', 'customers')
+                  field: cust_id

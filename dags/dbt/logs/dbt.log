@@ -1,0 +1,89 @@
+[0m08:40:57.391119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593ddd04740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593df994080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593dd61f350>]}
+
+
+============================== 08:40:57.392915 | 31c84af5-aa21-48bc-aeb4-0b935ab3db92 ==============================
+[0m08:40:57.392915 [info ] [MainThread]: Running with dbt=1.12.4
+[0m08:40:57.393286 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'quiet': 'False', 'fail_fast': 'False', 'target_path': 'None', 'cache_selected_only': 'False', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'version_check': 'True', 'hints_enabled': 'True', 'profiles_dir': '/home/atle/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'no_print': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'printer_width': '80', 'introspect': 'True', 'write_json': 'True', 'log_path': 'logs'}
+[0m08:41:03.631143 [debug] [MainThread]: Starter project path: /home/atle/dbt_airflow/.venv/lib/python3.12/site-packages/dbt/include/starter_project
+[0m08:41:03.633210 [info ] [MainThread]: Setting up your profile.
+[0m08:41:06.271767 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m08:41:06.272083 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m08:41:06.272335 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m08:41:33.964276 [info ] [MainThread]: Profile cosmosproject written to /home/atle/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m08:41:33.965281 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m08:41:33.965661 [info ] [MainThread]: dbt version: 1.12.4
+[0m08:41:33.965889 [info ] [MainThread]: python version: 3.12.3
+[0m08:41:33.966112 [info ] [MainThread]: python path: /home/atle/dbt_airflow/.venv/bin/python3
+[0m08:41:33.966330 [info ] [MainThread]: os info: Linux-7.0.0-31-generic-x86_64-with-glibc2.39
+[0m08:41:34.004328 [info ] [MainThread]: Using profiles dir at /home/atle/.dbt
+[0m08:41:34.004599 [info ] [MainThread]: Using profiles.yml file at /home/atle/.dbt/profiles.yml
+[0m08:41:34.004849 [info ] [MainThread]: Using dbt_project.yml file at /home/atle/dbt_airflow/dags/dbt/cosmosproject/dbt_project.yml
+[0m08:41:34.005172 [info ] [MainThread]: adapter type: snowflake
+[0m08:41:34.005408 [info ] [MainThread]: adapter version: 1.12.0
+[0m08:41:34.083145 [info ] [MainThread]: Configuration:
+[0m08:41:34.083402 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m08:41:34.083645 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m08:41:34.083873 [info ] [MainThread]: Required dependencies:
+[0m08:41:34.084114 [debug] [MainThread]: Executing "git --help"
+[0m08:41:34.085756 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m08:41:34.086285 [debug] [MainThread]: STDERR: "b''"
+[0m08:41:34.086572 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m08:41:34.086860 [info ] [MainThread]: Connection:
+[0m08:41:34.087150 [info ] [MainThread]:   account: RHB21769
+[0m08:41:34.087553 [info ] [MainThread]:   user: Blyvion
+[0m08:41:34.087797 [info ] [MainThread]:   database: dbt_db
+[0m08:41:34.088032 [info ] [MainThread]:   warehouse: dbt_wh
+[0m08:41:34.088316 [info ] [MainThread]:   role: dbt_role
+[0m08:41:34.088634 [info ] [MainThread]:   schema: dbt_schema
+[0m08:41:34.088953 [info ] [MainThread]:   authenticator: None
+[0m08:41:34.089239 [info ] [MainThread]:   oauth_client_id: None
+[0m08:41:34.089471 [info ] [MainThread]:   query_tag: None
+[0m08:41:34.089834 [info ] [MainThread]:   client_session_keep_alive: False
+[0m08:41:34.090138 [info ] [MainThread]:   host: None
+[0m08:41:34.090384 [info ] [MainThread]:   port: None
+[0m08:41:34.090618 [info ] [MainThread]:   proxy_host: None
+[0m08:41:34.090840 [info ] [MainThread]:   proxy_port: None
+[0m08:41:34.091058 [info ] [MainThread]:   protocol: None
+[0m08:41:34.091275 [info ] [MainThread]:   connect_retries: 1
+[0m08:41:34.091501 [info ] [MainThread]:   connect_timeout: None
+[0m08:41:34.091721 [info ] [MainThread]:   retry_on_database_errors: False
+[0m08:41:34.091940 [info ] [MainThread]:   retry_all: False
+[0m08:41:34.092155 [info ] [MainThread]:   insecure_mode: False
+[0m08:41:34.092368 [info ] [MainThread]:   reuse_connections: True
+[0m08:41:34.092592 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m08:41:34.092810 [info ] [MainThread]:   workload_identity_provider: None
+[0m08:41:34.093026 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m08:41:34.093241 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m08:41:34.093538 [info ] [MainThread]: Registered adapter: snowflake=1.12.0
+[0m08:41:34.160993 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m08:41:34.162223 [debug] [MainThread]: Using snowflake connection "debug"
+[0m08:41:34.162465 [debug] [MainThread]: On debug: select 1 as id
+[0m08:41:34.162678 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m08:41:35.974163 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.811 seconds
+[0m08:41:35.974836 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m08:41:35.975109 [info ] [MainThread]: [32mAll checks passed![0m
+[0m08:41:35.975390 [info ] [MainThread]: Your new dbt project "cosmosproject" was created!
+Initialized new project in /home/atle/dbt_airflow/dags/dbt/cosmosproject/cosmosproject
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m08:41:35.976045 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 38.641888, "process_in_blocks": "0", "process_kernel_time": 0.174994, "process_mem_max_rss": "154560", "process_out_blocks": "4992", "process_user_time": 1.437952}
+[0m08:41:35.976573 [debug] [MainThread]: Command `dbt init` succeeded at 08:41:35.976421 after 38.64 seconds
+[0m08:41:35.976827 [debug] [MainThread]: Connection 'debug' was left open.
+[0m08:41:35.977063 [debug] [MainThread]: On debug: Close
+[0m08:41:36.140668 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593dc865430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593dbafb9b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7593db69a840>]}
+[0m08:41:36.140990 [debug] [MainThread]: Flushing usage events
+[0m08:41:36.350623 [debug] [MainThread]: An error was encountered while trying to flush usage events
